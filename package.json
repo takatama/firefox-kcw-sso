@@ -1,0 +1,20 @@
+{
+    "title": "KDDI ChatWork チャットワーク シングルサインオン",
+    "name": "kddi-chatwork-sso",
+    "version": "0.1.0",
+    "description": "ログインセッションが切れた時、専用ログインURLにリダイレクトします。専用ログインURLは会社ごとに決まっています。",
+    "main": "index.js",
+    "author": "TAKATAMA, Hirokazu",
+    "engines": {
+        "firefox": ">=38.0a1",
+        "fennec": ">=38.0a1"
+    },
+    "license": "MIT",
+    "preferences": [{
+        "name": "companyCode",
+        "title": "会社コード",
+        "description": "専用ログインURL (https://kcw.kddi.ne.jp/s/*) の最後の部分です。",
+        "type": "string",
+        "value": ""
+    }]
+}
