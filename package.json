@@ -11,7 +11,7 @@
     },
     "license": "MIT",
     "preferences": [{
-        "name": "companyCode",
+        "name": "company_code",
         "title": "会社コード",
         "description": "専用ログインURL (https://kcw.kddi.ne.jp/s/*) の最後の部分です。",
         "type": "string",
