@@ -20,13 +20,13 @@ var withCompanyCode = function(url, companyCode) {
     return url;
 };
 
-self.port.on('onCompanyCode', function (companyCode) {
+self.port.on('onCompanyCode', function (data) {
     if (!isLoginUrlWithoutCompanyCode(document.URL)) {
         return;
     }
-    if (!companyCode) {
-        alert('アドオン管理画面から会社コードを設定してください。');
+    if (!data.companyCode) {
+        alert(data.alertMessage);
         return;
     }
-    document.location = withCompanyCode(document.URL, companyCode); 
+    document.location = withCompanyCode(document.URL, data.companyCode);
 });

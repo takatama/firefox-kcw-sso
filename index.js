@@ -1,3 +1,5 @@
+var _ = require("sdk/l10n").get;
+
 require("sdk/page-mod").PageMod({
     include: '*.kcw.kddi.ne.jp',
     contentScriptFile: './redirect-to-login.js',
@@ -10,8 +12,8 @@ require("sdk/page-mod").PageMod({
     }],
     onAttach: function (worker) {
         worker.port.on('getCompanyCode', function () {
-            var companyCode = require('sdk/simple-prefs').prefs.companyCode;
-            worker.port.emit('onCompanyCode', companyCode);
+            var companyCode = require('sdk/simple-prefs').prefs['company_code'];
+            worker.port.emit('onCompanyCode', { companyCode: companyCode, alertMessage: _('alert_no_company_code')});
         });
     }
 });
