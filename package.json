@@ -1,6 +1,6 @@
 {
     "title": "KDDI ChatWork チャットワーク シングルサインオン",
-    "name": "kddi-chatwork-sso",
+    "name": "kddi_chatwork_sso",
     "version": "0.1.0",
     "description": "ログインセッションが切れた時、専用ログインURLにリダイレクトします。専用ログインURLは会社ごとに決まっています。",
     "main": "index.js",
