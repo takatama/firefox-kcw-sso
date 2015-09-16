@@ -2,3 +2,5 @@
 *.xpi
 .git/
 .idea/
+.gitignore
+.jpmignore
